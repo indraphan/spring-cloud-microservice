@@ -8,7 +8,7 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.indraphan.learn.springcloud.microservice.accountmanagement</groupId>
+	<groupId>com.indraphan.learn.springcloud.microservice.account</groupId>
 	<artifactId>account-management-microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>account-management-microservice</name>
