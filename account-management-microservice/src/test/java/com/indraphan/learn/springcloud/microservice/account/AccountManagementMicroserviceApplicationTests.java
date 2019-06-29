@@ -1,4 +1,4 @@
-package com.indraphan.learn.springcloud.microservice.accountmanagement;
+package com.indraphan.learn.springcloud.microservice.account;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
