@@ -27,9 +27,11 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		
 		//To configure HTTP request that doesn't need authorization
 		http.authorizeRequests()
+			.antMatchers(environment.getProperty("api.zuul.actuator.utl.path")).permitAll()
 			.antMatchers(environment.getProperty("api.h2console.url.path")).permitAll()
 			.antMatchers(HttpMethod.POST, environment.getProperty("api.registration.url.path")).permitAll()
 			.antMatchers(HttpMethod.POST, environment.getProperty("api.login.url.path")).permitAll()
+			.antMatchers(HttpMethod.POST, environment.getProperty("api.users.actuator.url.path")).permitAll()
 			.anyRequest().authenticated()
 			.and()
 			.addFilter(new AuthorizationFilter(authenticationManager(), environment));
