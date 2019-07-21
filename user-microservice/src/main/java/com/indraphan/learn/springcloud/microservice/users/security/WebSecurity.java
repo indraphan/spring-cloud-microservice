@@ -30,7 +30,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable();
 		
-		http.authorizeRequests().antMatchers("/**").hasIpAddress(env.getProperty("gateway.ip"))
+		http.authorizeRequests()
+			.antMatchers(env.getProperty("api.h2console.url.path")).permitAll()
+			.antMatchers("/**").hasIpAddress(env.getProperty("gateway.ip"))
 			.and().addFilter(getAuthenticationFilter());
 		
 		http.headers().frameOptions().disable();
