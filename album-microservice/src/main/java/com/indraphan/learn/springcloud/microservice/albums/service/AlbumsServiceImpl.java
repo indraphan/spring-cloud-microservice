@@ -22,11 +22,11 @@ public class AlbumsServiceImpl implements AlbumsService {
 		albumEntity.setName("album 1 name");
 		
 		AlbumEntity albumEntity2 = new AlbumEntity();
-		albumEntity.setUserId(userId);
-		albumEntity.setAlbumId("album2Id");
-		albumEntity.setDescription("album2 Description");
-		albumEntity.setId(1L);
-		albumEntity.setName("album 2 name");
+		albumEntity2.setUserId(userId);
+		albumEntity2.setAlbumId("album2Id");
+		albumEntity2.setDescription("album2 Description");
+		albumEntity2.setId(1L);
+		albumEntity2.setName("album 2 name");
 		
 		returnValue.add(albumEntity);
 		returnValue.add(albumEntity2);
