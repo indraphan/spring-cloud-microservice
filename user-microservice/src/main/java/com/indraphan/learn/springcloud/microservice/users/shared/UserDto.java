@@ -1,6 +1,9 @@
 package com.indraphan.learn.springcloud.microservice.users.shared;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.indraphan.learn.springcloud.microservice.users.ui.model.AlbumResponseModel;
 
 import lombok.Data;
 
@@ -17,4 +20,5 @@ public class UserDto implements Serializable {
 	private String password;
 	private String userId;
 	private String encryptedPassword;
+	private List<AlbumResponseModel> albums;
 }
